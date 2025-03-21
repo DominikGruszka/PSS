@@ -1,0 +1,1786 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Navbar */
+.navbar {
+    background: #2c3e50;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.navbar .logo {
+    margin-right: auto;
+}
+
+.navbar .logo a {
+    text-decoration: none; 
+}
+
+.navbar .logo .ride {
+    color: white; 
+}
+
+.navbar .logo .flow {
+    color: red; 
+}
+
+.navbar .logo img {
+    height: 50px;
+    width: auto;
+}
+
+.navbar .center-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; 
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .center-menu li {
+    margin: 0 15px;
+}
+
+.navbar .center-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar .center-menu a:hover {
+    color: #1abc9c;
+}
+
+.navbar .user-menu {
+    position: relative;
+    margin-left: auto; 
+}
+
+.navbar .user-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar .user-menu .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    min-width: 150px;
+    z-index: 10;
+    padding-right: 10px;
+}
+
+.navbar .user-menu:hover .dropdown {
+    display: block;
+}
+
+.navbar .user-menu .dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.navbar .user-menu .dropdown a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Pierwszy blok na stonie głównej */
+.hero {
+    background: #1abc9c;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero .btn-primary {
+    background: #fff;
+    color: #1abc9c;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.hero .btn-primary:hover {
+    background: #16a085;
+    color: #fff;
+}
+
+/* Sekcja o nas na stronie głównej */
+.about {
+    padding: 50px 20px;
+    text-align: center;
+    background: #ecf0f1;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+}
+
+/* Sekcja usługi na stronie głównej */
+.services {
+    padding: 50px 20px;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.services .grid {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.service-item {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 20px;
+}
+
+.service-item i {
+    font-size: 40px;
+    color: #1abc9c;
+    margin-bottom: 10px;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Sekcja kontakt na stronie głównej */
+.contact {
+    padding: 10px 20px;
+    text-align: center;
+    background: #ecf0f1;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.contactp {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+/* Footer */
+.footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* LoginView */
+.login-section {
+    padding: 30px 30px;
+    text-align: center;
+}
+
+.login-section h4 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1abc9c;  
+}
+
+#login form {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#login .pure-control-group {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#login label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#login input[type="text"],
+#login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#login input[type="text"]:focus,
+#login input[type="password"]:focus {
+    border-color: #1abc9c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
+
+#login .pure-button {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#login .pure-button:hover {
+    background: #16a085;
+}
+#login .pure-button-secondary {
+    background-color: #1abc9c;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: -60px;
+}
+
+#login .pure-button-secondary:hover {
+    background-color: #16a085;
+}
+
+/* Błędy, powiadomienia */ 
+.alert {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+}
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Komunikaty */
+.notifications {
+    position: fixed; 
+    bottom: 50px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    z-index: 1000; 
+    width: auto;
+    max-width: 80%;
+    text-align: center;
+}
+
+.notification-box {
+    padding: 15px 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Typy komunikatów */
+.notification-info {
+    background-color: #17a2b8; 
+}
+
+.notification-warning {
+    background-color: #ffc107; 
+    color: #000; 
+}
+
+.notification-error {
+    background-color: #dc3545; 
+}
+
+/* RegisterView */ 
+.register-section {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.register-section {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 300px; /* Dodano większy margines dolny */
+}
+
+.pure-control-group {
+    margin-bottom: 10px; 
+}
+
+.pure-control-group label {
+    display: inline-block; 
+    text-align: center; 
+    font-weight: bold;
+    margin-right: 200px; 
+    width: auto; 
+}
+
+.pure-control-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.pure-controls {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.pure-button-primary {
+    background-color: #1f8dd6;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 0; 
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.pure-button-primary:hover {
+    background-color: #155a9c;
+}
+
+/* RentalsView zdjęcia */
+.rental-cars {
+    padding: 20px;
+    text-align: center;
+}
+
+.rental-cars h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1abc9c;
+}
+
+.rental-cars .cars {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;  
+}
+
+.card {
+    width: calc(33.33% - 20px); 
+    box-sizing: border-box; 
+    border-radius: 8px;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    background: white; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.card .image-box {
+    width: 100%;
+    height: 200px; 
+    border-radius: inherit;
+    position: relative;
+    overflow: hidden;
+}
+
+.card .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center;
+    border-radius: inherit;
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover .image-box img {
+    filter: grayscale(1) brightness(0.8); 
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.card:hover::after {
+    opacity: 1;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+}
+
+.content10 {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: transparent;
+    opacity: 0;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.card:hover .content10 {
+    opacity: 1;
+    color: white;
+}
+
+.content10 h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.content10 p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #D3D3D3;
+}
+
+/* ProfileView */
+.profile-section {
+    padding: 30px 30px;
+    text-align: center;
+}
+
+.profile-section h4 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1abc9c; 
+}
+
+#profile form {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px;
+    margin-top: 10px;
+}
+
+#profile .pure-control-group {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#profile label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#profile input[type="text"],
+#profile input[type="password"],
+#profile input[type="email"],
+#profile input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#profile input[type="text"]:focus,
+#profile input[type="password"]:focus,
+#profile input[type="email"]:focus,
+#profile input[type="tel"]:focus {
+    border-color: #1abc9c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
+
+#profile .pure-button {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#profile .pure-button:hover {
+    background: #16a085;
+}
+
+/* ReportsView */
+.vehicle-section {
+    padding: 30px 30px;
+    text-align: center;
+}
+
+.vehicle-section h4 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1abc9c;
+    margin-bottom: 100px;
+}
+
+#vehicle form {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px;
+    margin-top: 10px;
+}
+
+#vehicle .pure-control-group {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#vehicle label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#vehicle input[type="text"],
+#vehicle input[type="number"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+    margin-right: 165px;  
+}
+
+#vehicle input[type="text"]:focus,
+#vehicle input[type="number"]:focus {
+    border-color: #1abc9c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
+
+#vehicle .pure-button {
+    display: inline-block;
+    width: 135%;
+    padding: 10px;
+    background: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    transform: translateX(-165px); 
+    margin-bottom: 15px;
+}
+
+#vehicle .pure-button:hover {
+    background: #16a085;
+}
+
+/* VehiclesListView */
+.vehicles-list-section h4 {
+    font-size: 32px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #1abc9c;
+    text-align: center;
+}
+
+#vehicles-list table {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    border-collapse: collapse;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+#vehicles-list table thead {
+    background: #1abc9c;
+    color: white;
+    text-align: left;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#vehicles-list table th,
+#vehicles-list table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+#vehicles-list table tr:last-child td {
+    border-bottom: none;
+}
+
+#vehicles-list table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+#vehicles-list table tr:hover {
+    background: rgba(26, 188, 156, 0.2);
+}
+
+#vehicles-list input[type="text"],
+#vehicles-list input[type="number"] {
+    width: 90%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: left;
+}
+
+#vehicles-list input[type="text"]:focus,
+#vehicles-list input[type="number"]:focus {
+    border-color: #1abc9c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
+
+#vehicles-list .pure-button {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #3388ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 5px;
+}
+
+#vehicles-list .pure-button:hover {
+    background: #3355ff;
+}
+
+#vehicles-list .pure-button-secondary{
+    background: #e3172b;
+}
+
+#vehicles-list .pure-button-secondary:hover {
+    background: #b00e1e;
+}
+
+/* AdminView */
+.admin-panel-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1abc9c;
+}
+
+.admin-panel-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+#admin-panel table {
+    width: 90%; 
+    max-width: 1300px;
+    margin: 20px auto 20px -8%; 
+    background: #f9f9f9;
+    border-collapse: collapse;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+#admin-panel table thead {
+    background: #1abc9c;
+    color: white;
+    text-align: left;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#admin-panel table th,
+#admin-panel table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+#admin-panel table tr:last-child td {
+    border-bottom: none;
+}
+
+#admin-panel table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+#admin-panel table tr:hover {
+    background: rgba(26, 188, 156, 0.2);
+}
+
+#admin-panel select {
+    width: 90%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#admin-panel select:focus {
+    border-color: #1abc9c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
+
+#admin-panel .pure-button {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #3388ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 5px;
+}
+
+#admin-panel .pure-button:hover {
+    background: #3355ff;
+}
+
+#admin-panel .pure-button-secondary {
+    background: #e74c3c;
+    color: white;
+}
+
+#admin-panel .pure-button-secondary:hover {
+    background: #c0392b;
+}
+
+#admin-panel .pure-button-error{
+    background: #e74c3c;
+    color: white;
+}
+
+#admin-panel .pure-button-error:hover {
+    background: #c0392b;
+}
+
+.admin-panel-section .container {
+    padding: 20px;
+}
+
+.admin-panel-section .action-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+/* UserVehiclesView */
+.user-vehicles-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1abc9c;
+}
+
+.user-vehicles-section table {
+    width: 100%;
+    max-width: 1300px;
+    margin: 20px auto 20px 0%;
+    background: #f9f9f9;
+    border-collapse: collapse;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.user-vehicles-section table thead {
+    background: #1abc9c;
+    color: white;
+    text-align: left;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.user-vehicles-section table th,
+.user-vehicles-section table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.user-vehicles-section table tr:last-child td {
+    border-bottom: none;
+}
+
+.user-vehicles-section table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+.user-vehicles-section table tr:hover {
+    background: rgba(26, 188, 156, 0.2);
+}
+
+.user-vehicles-section input[type="text"],
+.user-vehicles-section input[type="number"] {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 80%;
+}
+
+.user-vehicles-section input[type="text"]:focus,
+.user-vehicles-section input[type="number"]:focus {
+    border-color: #1abc9c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
+
+.user-vehicles-section .pure-button {
+    padding: 8px 20px;
+    background: #3388ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 5px;
+}
+
+.user-vehicles-section .pure-button:hover {
+    background: #3355ff;
+}
+
+.user-vehicles-section .pure-button-secondary {
+    background: #e74c3c;
+    color: white;
+}
+
+.user-vehicles-section .pure-button-secondary:hover {
+    background: #c0392b;
+}
+
+.user-vehicles-section .container {
+    padding: 20px;
+}
+
+.user-vehicles-section .action-buttons {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100%;             
+}
+
+.user-vehicles-section .pure-button-primary1 {
+    background: #3388ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.user-vehicles-section .pure-button-primary1:hover {
+    background: #3355ff;
+}
+
+/* WorkshopPanelView */
+.workshop-panel-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1abc9c;
+}
+
+.workshop-panel-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+#workshop-panel table {
+    width: 100%; 
+    max-width: 1500px;
+    margin: 20px auto; 
+    background: #f9f9f9;
+    border-collapse: collapse;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+#workshop-panel table thead {
+    background: #1abc9c;
+    color: white;
+    text-align: left;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#workshop-panel table th,
+#workshop-panel table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+#workshop-panel table tr:last-child td {
+    border-bottom: none;
+}
+
+#workshop-panel table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+#workshop-panel table tr:hover {
+    background: rgba(26, 188, 156, 0.2);
+}
+
+#workshop-panel select {
+    width: 90%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#workshop-panel select:focus {
+    border-color: #1abc9c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
+
+#workshop-panel .pure-button {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #3388ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 5px;
+}
+
+#workshop-panel .pure-button:hover {
+    background: #3355ff;
+}
+
+#workshop-panel .pure-button-secondary {
+    background: #e83c2a;
+    color: white;
+}
+
+#workshop-panel .pure-button-secondary:hover {
+    background: #e64c3c;
+}
+
+#workshop-panel .pure-button-error {
+    background: #e74c3c;
+    color: white;
+}
+
+#workshop-panel .pure-button-error:hover {
+    background: #c0392b;
+}
+
+/* PartsDemandView */ 
+.order-parts-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1abc9c;
+}
+
+.order-parts-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+#order-parts table {
+    width: 90%;
+    max-width: 1300px;
+    margin: 20px auto;
+    background: #f9f9f9;
+    border-collapse: collapse;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+#order-parts table thead {
+    background: #1abc9c;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#order-parts table th,
+#order-parts table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+#order-parts table tr:last-child td {
+    border-bottom: none;
+}
+
+#order-parts table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+#order-parts table tr:hover {
+    background: rgba(26, 188, 156, 0.2);
+}
+
+#order-parts input[type="text"],
+#order-parts input[type="number"],
+#order-parts textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#order-parts input[type="text"]:focus,
+#order-parts input[type="number"]:focus,
+#order-parts textarea:focus {
+    border-color: #1abc9c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
+
+#order-parts .pure-button {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #3388ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 5px;
+}
+
+#order-parts .pure-button:hover {
+    background: #3355ff;
+}
+
+#order-parts .pure-button-secondary {
+    background: #e74c3c;
+    color: white;
+}
+
+#order-parts .pure-button-secondary:hover {
+    background: #c0392b;
+}
+
+#order-parts .action-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.order-parts-section .container {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* OfficePanelVeiw */
+.office-panel-section h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #1abc9c;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.option-card {
+    width: 300px;
+    height: 400px;
+    background: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 169px;
+    margin-right: 20px;
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.option-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.card-content p {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+/* OderPartsOverviewView */
+.order-parts-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1abc9c;
+}
+
+.order-parts-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+.order-parts-section table th, 
+.order-parts-section table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.order-parts-section table thead {
+    background-color: #1abc9c;
+    color: white;
+}
+
+.order-parts-section table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.order-parts-section .pure-button {
+    margin-top: 10px;
+}
+
+.action-buttons {
+    margin-top: 30px;
+    text-align: center;
+}
+.action-buttons .pure-button-secondary {
+    background: #e74c3c; 
+    color: white; 
+    border: none; 
+    transition: background 0.3s; 
+}
+
+.action-buttons .pure-button-secondary:hover {
+    background: #c0392b; 
+}
+
+/* SettleVehiclesView */
+.settle-vehicles-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1abc9c;
+}
+
+.settle-vehicles-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+.settle-vehicles-section table th, 
+.settle-vehicles-section table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.settle-vehicles-section table thead {
+    background-color: #1abc9c;
+    color: white;
+}
+
+.settle-vehicles-section table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.settle-vehicles-section .pure-button {
+    margin-top: 10px;
+}
+
+.action-buttons {
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* FinalizeSettlementView */
+.finalize-settlement-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1abc9c;
+}
+
+.finalize-settlement-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.finalize-settlement-section p {
+    font-size: 16px;
+    color: #34495e;
+    margin: 5px 0;
+}
+
+.finalize-settlement-section table {
+    width: 90%;
+    max-width: 1300px;
+    margin: 20px auto;
+    background: #f9f9f9;
+    border-collapse: collapse;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.finalize-settlement-section table thead {
+    background: #1abc9c;
+    color: white;
+    text-align: left;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.finalize-settlement-section table th,
+.finalize-settlement-section table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.finalize-settlement-section table tr:last-child td {
+    border-bottom: none;
+}
+
+.finalize-settlement-section table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+.finalize-settlement-section table tr:hover {
+    background: rgba(26, 188, 156, 0.2);
+}
+
+.finalize-settlement-section input[type="number"] {
+    width: 80%;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: right;
+}
+
+.finalize-settlement-section input[type="number"]:focus {
+    border-color: #1abc9c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
+
+.finalize-settlement-section .pure-button {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #3388ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 5px;
+}
+
+.finalize-settlement-section .pure-button:hover {
+    background: #3355ff;
+}
+
+.finalize-settlement-section .pure-button-primary {
+    background: #1abc9c;
+    color: white;
+}
+
+.finalize-settlement-section .pure-button-primary:hover {
+    background: #16a085;
+}
+
+.finalize-settlement-section .pure-button-secondary {
+    background: #e74c3c;
+    color: white;
+}
+
+.finalize-settlement-section .pure-button-secondary:hover {
+    background: #c0392b;
+}
+
+.finalize-settlement-section .action-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.finalize-settlement-section h3 {
+    font-size: 24px;
+    margin-top: 20px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.finalize-settlement-section h3 span {
+    font-weight: bold;
+    color: #1abc9c;
+}
+
+/* RolesView */
+.roles-management-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1abc9c;
+}
+
+.roles-management-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.roles-management-section form {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    text-align: center;
+    
+}
+
+.roles-management-section form input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.roles-management-section form button {
+    padding: 10px 20px;
+    background: #3388ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.roles-management-section form button:hover {
+    background: #3355ff;
+}
+
+.roles-management-section table {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.roles-management-section table thead {
+    background: #1abc9c;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.roles-management-section table th,
+.roles-management-section table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.roles-management-section table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.roles-management-section table tr:hover {
+    background: rgba(26, 188, 156, 0.2);
+}
+
+.roles-management-section .action-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.roles-management-section .action-buttons a {
+    padding: 10px 20px;
+    background: #e74c3c;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.roles-management-section .action-buttons a:hover {
+    background: #c0392b;
+}
+.roles-management-section table .pure-button-error {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.roles-management-section table .pure-button-error:hover {
+    background-color: #c0392b;
+}
+
+/* PasswordView */
+.password-reset-section h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #1abc9c;
+    padding-top: 20px;
+}
+
+.password-reset-section .pure-control-group {
+    margin-bottom: 100px;
+    width: 50%;
+    margin-left: 400px;
+    margin-top: 30px;
+}
+
+.password-reset-section .pure-button { 
+    padding: 10px 20px;
+    background-color: #3388ff;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 650px;
+    margin-bottom: 50px; 
+}
+
+.password-reset-section .pure-button:hover {
+    background-color: #3355ff;
+}
+
+.password-reset-section .pure-button-secondary {
+    display: block; 
+    margin: 0 auto; 
+    width: 35%;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 267px;
+}
+
+.password-reset-section .pure-button-secondary:hover {
+    background-color: #c0392b;
+}
+
+
+
+
+/* Stronicowanie DEMO */
+
+.pagination-demo-section h1 {
+    font-size: 32px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #1abc9c;
+    text-align: center;
+}
+
+#pagination-demo table {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    border-collapse: collapse;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+#pagination-demo table thead {
+    background: #1abc9c;
+    color: white;
+    text-align: left;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#pagination-demo table th,
+#pagination-demo table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+#pagination-demo table tr:last-child td {
+    border-bottom: none;
+}
+
+#pagination-demo table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+#pagination-demo table tr:hover {
+    background: rgba(26, 188, 156, 0.2);
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination .pure-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #3388ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 5px;
+}
+
+.pagination .pure-button:hover {
+    background: #3355ff;
+}
+
+.pagination .pure-button-primary {
+    background: #1abc9c;
+}
+
+.pagination .pure-button-primary:hover {
+    background: #16a085;
+}
+
+
+
+
+
+/*Ajax */
+.ajax-demo-section h1 {
+    font-size: 32px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #1abc9c;
+    text-align: center;
+}
+
+#ajax-demo table {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    border-collapse: collapse;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+#ajax-demo table thead {
+    background: #1abc9c;
+    color: white;
+    text-align: left;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#ajax-demo table th,
+#ajax-demo table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+#ajax-demo table tr:hover {
+    background: rgba(26, 188, 156, 0.2);
+}
+
+#ajax-demo .pure-button-error {
+    background: #e3172b;
+    color: white;
+}
+
+#ajax-demo .pure-button-error:hover {
+    background: #b00e1e;
+}
+
