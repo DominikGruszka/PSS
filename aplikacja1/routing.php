@@ -74,17 +74,17 @@ Utils::addRoute('partsDemand',          'PartsDemandCtrl');
 // Usuwanie części z tabeli przez pracownik_warsztatowy
 Utils::addRoute('deletePart',           'PartsDemandCtrl');
 
-
-
 // Zastosowanie stronicowania
 Utils::addRoute('paginationDemo',        'PaginationDemoCtrl');
 
 
 
-
 // Zastosowanie AJAX
-Utils::addRoute('ajaxDeleteUser',       'AjaxDemoCtrl');
 Utils::addRoute('ajaxDemo',             'AjaxDemoCtrl'); 
+Utils::addRoute('ajaxDeleteUser',       'AjaxDemoCtrl');
+
+
+
 
 
 
