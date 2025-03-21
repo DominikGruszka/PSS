@@ -14,7 +14,7 @@ class PaginationDemoCtrl {
         $current_page = max(1, (int) getFromRequest('page', 1));
 
         try {
-            // Pobranie liczby rekordów w tabeli users (możesz zmienić na inną tabelę)
+            // Pobranie liczby rekordów w tabeli users 
             $total_items = App::getDB()->count("users");
 
             // Obliczenie liczby stron
